@@ -27,7 +27,7 @@ const ChangePassword = () => {
   };
 
   return (
-    <div className="change-password-container">
+    <div className="change-password-container" style={{ display: "flex" }}>
       <Sidebar isSidebarOpen={isSidebarOpen} />
       <div className="change-password-content">
         <Header toggleSidebar={toggleSidebar} />
@@ -38,54 +38,67 @@ const ChangePassword = () => {
               <tbody>
                 <tr>
                   <td>
-                    <label htmlFor="oldPassword">Enter Your Old Password</label>
+                    <label htmlFor="oldPassword" style={{ color: "#444" }}>
+                      Enter Your Old Password
+                    </label>
                     <br />
-                    <input
-                      type="password"
-                      id="oldPassword"
-                      className="md-input"
-                      placeholder="Enter Your Old Password"
-                      required
-                      value={oldPassword}
-                      onChange={(e) => setOldPassword(e.target.value)}
-                      aria-label="Enter Your Old Password"
-                    />
+                    <div className="md-input-wrapper">
+                      <input
+                        type="password"
+                        id="oldPassword"
+                        className="md-input"
+                        placeholder="Enter Your Old Password"
+                        required
+                        value={oldPassword}
+                        onChange={(e) => setOldPassword(e.target.value)}
+                        aria-label="Enter Your Old Password"
+                        style={{ border: "1px solid" }}
+                      />
+                    </div>
                   </td>
                 </tr>
                 <tr>
                   <td>
                     <br />
-                    <label htmlFor="newPassword">Your New Password</label>
+                    <label htmlFor="newPassword" style={{ color: "#444" }}>
+                      Your New Password
+                    </label>
                     <br />
-                    <input
-                      type="password"
-                      id="newPassword"
-                      className="md-input"
-                      placeholder="Enter Your New Password"
-                      required
-                      value={newPassword}
-                      onChange={(e) => setNewPassword(e.target.value)}
-                      aria-label="Enter Your New Password"
-                    />
+                    <div className="md-input-wrapper">
+                      <input
+                        type="password"
+                        id="newPassword"
+                        className="md-input"
+                        placeholder="Enter Your New Password"
+                        required
+                        value={newPassword}
+                        onChange={(e) => setNewPassword(e.target.value)}
+                        aria-label="Enter Your New Password"
+                        style={{ border: "1px solid" }}
+                      />
+                    </div>
                   </td>
                 </tr>
                 <tr>
                   <td>
                     <br />
-                    <label htmlFor="rePassword">
+                    <label htmlFor="rePassword" style={{ color: "#444" }}>
                       Enter Your New Password (Re Type)
                     </label>
                     <br />
-                    <input
-                      type="password"
-                      id="rePassword"
-                      className="md-input"
-                      placeholder="Re-Enter Your New Password"
-                      required
-                      value={rePassword}
-                      onChange={(e) => setRePassword(e.target.value)}
-                      aria-label="Re-Enter Your New Password"
-                    />
+                    <div className="md-input-wrapper">
+                      <input
+                        type="password"
+                        id="rePassword"
+                        className="md-input"
+                        placeholder="Re-Enter Your New Password"
+                        required
+                        value={rePassword}
+                        onChange={(e) => setRePassword(e.target.value)}
+                        aria-label="Re-Enter Your New Password"
+                        style={{ border: "1px solid" }}
+                      />
+                    </div>
                   </td>
                 </tr>
                 <tr>
