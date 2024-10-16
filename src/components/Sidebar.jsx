@@ -21,7 +21,7 @@ const Sidebar = ({ isSidebarOpen }) => {
             <li key={index} className="sidebar-item">
               <Link to={item.path} className="sidebar-link">
                 <item.icon className="icon" />
-                <span>{item.label}</span>
+                <span className="sb">{item.label} </span>
               </Link>
             </li>
           ))}

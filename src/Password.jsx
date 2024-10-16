@@ -3,8 +3,13 @@ import React, { useState } from "react";
 import "./styles.css"; // Import your CSS styles
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
+import Marquee from "./components/Marquee";
 
 const ChangePassword = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
   const [oldPassword, setOldPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [rePassword, setRePassword] = useState("");
@@ -23,9 +28,10 @@ const ChangePassword = () => {
 
   return (
     <div className="change-password-container">
-      <Sidebar />
+      <Sidebar isSidebarOpen={isSidebarOpen} />
       <div className="change-password-content">
-        <Header />
+        <Header toggleSidebar={toggleSidebar} />
+        <Marquee />
         <div className="md-card-content">
           <form onSubmit={handleSubmit}>
             <table className="form-table">

@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import Ledger from "./components/Ledger"; // Import the Ledger component
 import "./Allcss/Home.css"; // Ensure correct import
 import GameGrid from "./components/Gamegrid";
+import Marquee from "./components/Marquee";
 const Home = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -11,13 +12,13 @@ const Home = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
   return (
-
     <div>
-        <Header toggleSidebar={toggleSidebar} />
-        <div className="main-wrapper">
-            <Sidebar isSidebarOpen={isSidebarOpen} />
-            <GameGrid />
-        </div>
+      <Header toggleSidebar={toggleSidebar} />
+      <Marquee />
+      <div className="main-wrapper">
+        <Sidebar isSidebarOpen={isSidebarOpen} />
+        <GameGrid />
+      </div>
     </div>
   );
 };

@@ -10,16 +10,14 @@ const Game = () => {
     <div>
       <Header />
       <Marquee />
-      <div className="ledger-container" style={{ display: "flex" }}>
+      <div className="game-container" style={{ display: "flex" }}>
         <Sidebar />
         <div className="md-card uk-margin-medium-bottom" style={{ flex: 1 }}>
-          <div className="md-card-content">
+          <div className="md-card-content game-content">
             <div className="card-container">
               <center>
                 <span className="button">
                   <Link to="/keypad" className="button-link">
-                    {" "}
-                    {/* Use Link here */}
                     Open Round
                   </Link>
                 </span>
@@ -30,9 +28,29 @@ const Game = () => {
               <div className="info">-XX-</div>
               <center>
                 <span className="button">
-                  <a href="/keypad" className="button-link">
+                  <Link to="/keypad" className="button-link">
                     Close Round
-                  </a>
+                  </Link>
+                </span>
+              </center>
+            </div>
+            <div className="card-container">
+              <center>
+                <span className="button">
+                  <Link to="/keypad" className="button-link">
+                    Open Round
+                  </Link>
+                </span>
+              </center>
+              <center>
+                <h3 className="title">GOLDSTAR</h3>
+              </center>
+              <div className="info">123x45</div>
+              <center>
+                <span className="button">
+                  <Link to="/keypad" className="button-link">
+                    Close Round
+                  </Link>
                 </span>
               </center>
             </div>

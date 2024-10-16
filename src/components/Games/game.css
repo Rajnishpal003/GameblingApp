@@ -1,6 +1,7 @@
+
 .card-container {
   background: rgb(59, 62, 98);
-  position: absolute;
+/* position: absolute; */
   box-sizing: border-box;
   padding-left: 20px;
   padding-bottom: 20px;
@@ -12,6 +13,9 @@
   padding-top: 10px;
   width: 33.333%;
 
+}
+.game-container {
+  display: flex;
 }
 
 .button {
@@ -50,3 +54,10 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
+.game-content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px; /* Space between cards */
+  height: fit-content;
+}
+
